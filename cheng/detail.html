@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>详情页</title>
+    <!--强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览-->
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no"/>
+    <!--WebApp全屏模式   隐藏地址栏-->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!--苹果强制全屏显示-->
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <!--强制全屏显示-->
+    <meta name="full-screen" content="yes"/>
+    <!--制定iphone中safari顶端的状态条的样式（default:白色，black:黑色，black-translucent：半透明）-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <!--告诉设备忽略将页面中的数字识别为电话号码 -->
+    <meta name="format-detection" content="telephone=no"/>
+    <!--告诉设备忽略将页面中的地址识别 -->
+    <meta name="format-detection" content="address=no"/>
+    <link rel="stylesheet" href="css/detail.css">
+</head>
+<body>
+<header>
+    <input type="text" placeholder="搜索京东商品/店铺">
+</header>
+<section>
+    <div class="item1">
+        <img src="images/rBEhVlHnU9EIAAAAAAE2r4wpw1oAABI_gJYRrIAATbH261.jpg!q70.jpg" alt="">
+        <img src="images/rBEhVlHnU9EIAAAAAAE2r4wpw1oAABI_gJYRrIAATbH261.jpg!q70.jpg" alt="" class="move">
+        <div class="item_detail">
+            <div class="detail1">
+                <span>Apple iPhone 7 (A1660) 128G 黑色</span>
+                <i>重量:0.39kg版本:iPhone 7</i>
+            </div>
+            <div class="price">
+                <span>￥999.00</span>
+            </div>
+            <div class="item_bottom">
+                <em>自营</em>
+                <span>217290条评价 97%好评</span>
+                <i></i>
+            </div>
+        </div>
+    </div>
+    <div class="item1">
+        <img src="images/rBEhVlHnU9EIAAAAAAE2r4wpw1oAABI_gJYRrIAATbH261.jpg!q70.jpg" alt="">
+        <img src="images/rBEhVlHnU9EIAAAAAAE2r4wpw1oAABI_gJYRrIAATbH261.jpg!q70.jpg" alt="" class="move">
+
+        <div class="item_detail">
+            <div class="detail1">
+                <span>Apple iPhone 7 (A1660) 128G 黑色</span>
+                <i>重量:0.39kg版本:iPhone 7</i>
+            </div>
+            <div class="price">
+                <span>￥999.00</span>
+            </div>
+            <div class="item_bottom">
+                <em>自营</em>
+                <span>217290条评价 97%好评</span>
+                <i></i>
+            </div>
+        </div>
+    </div>
+    <div class="item1">
+        <img src="images/rBEhVlHnU9EIAAAAAAE2r4wpw1oAABI_gJYRrIAATbH261.jpg!q70.jpg" alt="">
+        <img src="images/rBEhVlHnU9EIAAAAAAE2r4wpw1oAABI_gJYRrIAATbH261.jpg!q70.jpg" alt="" class="move">
+
+        <div class="item_detail">
+            <div class="detail1">
+                <span>Apple iPhone 7 (A1660) 128G 黑色</span>
+                <i>重量:0.39kg版本:iPhone 7</i>
+            </div>
+            <div class="price">
+                <span>￥999.00</span>
+            </div>
+            <div class="item_bottom">
+                <em>自营</em>
+                <span>217290条评价 97%好评</span>
+                <i></i>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="hh">
+</div>
+<footer>
+    <div>
+        <div class="num">0</div>
+    </div>
+</footer>
+</body>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    function refresh() {
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 1080) {
+            document.documentElement.style.fontSize = 1080 / 10.8 + "px";
+        } else {
+            document.documentElement.style.fontSize = deviceWidth / 10.8 + "px";
+        }
+    }
+    refresh();
+    window.onresize = function () {
+        refresh();
+    }
+
+    $(function () {
+        var h = $(window).height();
+        var sH = h - $("header").height()
+        $("section").height(sH)
+
+
+        var itemH = $(".item_detail").outerHeight()
+        $(".item1").each(function (index) {
+            console.log($(".item1").height())
+            $(".item1").eq(index).find(".move").css({"top": index * itemH});
+
+        });
+
+        var num = 0
+        $(".item_bottom i").each(function (index) {
+            $(this).click(function () {
+                $(this).parents(".item1").find(".move").show().css({"z-index": "100"}).animate({left: "20%"}, 500, function () {
+                    $(this).animate({width: "1.5rem"}, 500, function () {
+                        $(this).delay(300).animate({left: "85%", top: "100%"}, 1000, function () {
+                            $(this).hide().css({"left": "0", "top": index * itemH});
+                            num = num + 1
+                            $(".num").html(num)
+                        })
+                    })
+                })
+            })
+        })
+
+    })
+</script>
+</html>

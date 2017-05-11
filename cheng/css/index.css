@@ -1,0 +1,33 @@
+*{margin:0;padding: 0}
+html,body{font-size: 12px}
+ul li{list-style: none;}
+header{padding:0 0.8rem;margin: 0 auto;position: fixed;top: 0;left: 0;background: #F6F6F6;width: 100%}
+header input{outline: none;height: 0.8rem;width:80%;line-height: 0.8rem;border-right: 1px solid #bfbfbf;  border-top-right-radius: 4px;  border-bottom-right-radius: 4px;background: none}
+section{width: 20%;padding: 0rem 0 0 0;  float: left; height:10rem;overflow: scroll;}
+.mark{margin-top: 0.8rem}
+::-webkit-scrollbar{width:0px}
+section ul li a{text-decoration: none;color: #232326}
+section ul .active{color:red;background:#bfbfbf }
+section ul li{line-height: 1.5rem;width: 99%;height: 1.5rem;text-align: center;padding: 0 1%;border-bottom: 1px solid #bfbfbf}
+.section_right{width: 80%;background:#bfbfbf; float: left;height: 10rem;overflow: scroll}
+.section_right> .banner,.item_list1{margin: 0 auto}
+.section_right .banner{width: 96%;height: 3.5rem;background: #000C3B;margin-top: 0.5rem}
+.item_list1{width: 96%;}
+.item_list1>ul>li>span{text-align: center;line-height: 2.5rem;font-size: 1.5rem;color: brown;display: block}
+.item_list1 li{width: 33.333%;height:2.5rem;background: #1f6377;float: left;}
+.section_right h4{
+    line-height: 2.5em;
+    color: #232326;
+    font-weight: normal;
+}
+
+
+
+footer{position: fixed;bottom: 0;left: 0;width: 100%;background: #fff;height:1.5rem}
+footer ul li{width: 20%;height:1.5rem;float: left;text-align: center;overflow: hidden}
+footer ul li img{display: block;text-align: center;width: 90%;height: 1.5rem}
+/*footer ul li:nth-of-type(1){background: url("../images/584f5fe8N07be60f6.png") no-repeat center}*/
+/*footer ul li:nth-of-type(2){background: url("../images/584f5ff0N304169c7.png") no-repeat center}*/
+/*footer ul li:nth-of-type(3){background: url("../images/584f5ffbN63cd7676.png") no-repeat center}*/
+/*footer ul li:nth-of-type(4){background: url("../images/584f6009N77d944f8.png") no-repeat center}*/
+/*footer ul li:nth-of-type(5){background: url("../images/584f6011Ndbe09ae8.png") no-repeat center}*/

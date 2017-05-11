@@ -1,0 +1,30 @@
+*{margin:0;padding: 0}
+html,body{font-size: 10px;background:#f0f2f5 }
+header{width: 100%;background: #bfbfbf;height: 4rem;font-size: 1.5rem;line-height: 4rem;text-align: center}
+.mode_box{background-color: #f0f2f5;padding-bottom: 10px;color: #686868}
+.mode_msg{height: 2.833rem;  background: #fff;  line-height: 2.833rem;  width: 100%;  text-align: center;}
+.mode_msg em{width: 18px;  height: 18px;  display: inline-block;  margin-right: 7px;  background: url("../images/shopping.cart.spirits.icns2.png") 0 -150px no-repeat;  background-size: 50px 200px;  vertical-align: middle; }
+.shop_title{text-align: left;font-size: 1.5rem;line-height: 4rem;height:4rem;border-bottom: 1px solid #f0f2f5;background: #fff;width: 96%;margin: 0 auto;}
+.shop_title input{margin-left: 1rem}
+.shop_tip{width: 100%;height: 4rem;line-height: 4rem;background: #fff}
+.shop_tip{width: 96%;margin: 0 auto}
+.shop_tip span{margin-left: 1rem}
+.itemlist ,.item1{width: 96%;margin: 0 auto;background: #fff}
+.item1{height: 9rem;overflow: hidden;margin-bottom: 0.3rem}
+.itemlist .item1 img{width: 8.8rem;height: 8.8rem;border:1px solid #ccc; float: left;}
+.itemlist .item1 .input1{display: block; float: left;margin:4.4rem 1rem}
+.item_detail{float: left;padding: 0.5rem;}
+/*.item_detail{width:14rem}*/
+.item_detail .detail1 span ,i{display: block;width:10rem;height: 3rem;overflow: hidden;font-style: normal }
+/*.price>*{float: left;}*/
+.price input{width: 1.5rem;text-align: center}
+.price :nth-child(1){color:#c00;}
+.price :nth-child(2){margin-left: 5rem}
+.price :nth-child(2),.price :nth-child(4){width: 1.5rem;height: 1.5rem;border: 1px solid #c7ddef;display: inline-block;text-align: center;line-height: 1.5rem;font-size: 1.5rem}
+.h{height:5.4rem}
+footer{width: 100%;height: 5rem;background: #fff;position: fixed;bottom: 0;left: 0}
+footer>*{  float: left;}
+footer .btn{width: 9.8rem;height: 5rem;text-align: center;color: #fff;background: #f23030;line-height: 5rem;font-weight: bold;font-size: 1.6rem;
+    float: right;}
+footer input{display: block;margin:2.5rem 2rem}
+footer span{display: inline-block;width: 15rem;font-size: 2rem;line-height: 5rem;font-weight: bold;}

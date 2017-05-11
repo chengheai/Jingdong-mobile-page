@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+  <script>
+  angular.module('myApp', [])
+    .controller('myCtrl', function($scope) {
+      $scope.name = '周杰伦';
+      $scope.name =sub($scope.name, 4)
+    })
+  </script>
+  <style>
+  em {
+    font: bold 40px "Microsoft YaHei UI";
+    color: #ffffff;
+    display: inline-block;
+  }
+  
+  div {
+    text-align: center;
+    line-height: 200px
+  }
+  </style>
+</head>
+
+<body ng-controller="myCtrl">
+<input type="text" ng-model="name">
+  <div style="width: 200px;height: 200px;background: #cc6666;border-radius: 50%"><em>{{name}}</em></div>
+</body>
+<script>
+  var sub = function(str, n) {
+    var r = /[^\x00-\xff]/g;
+    if (str.replace(r, "mm").length <= n) {
+      return str;
+    }
+    var m = Math.floor(n / 2);
+    for (var i = m; i < str.length; i++) {
+      if (str.substr(0, i).replace(r, "mm").length >= n) {
+        return str.substr(0, i);
+      }
+    }
+    return str;
+  }
+</script>
+</html>
